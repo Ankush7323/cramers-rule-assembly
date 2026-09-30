@@ -1,0 +1,416 @@
+     Assembly listing for: cramer.mas
+                Assembled: Mon Mar 30 10:00:27 MUT 2026
+
+         |         ORG 100           
+         |                          
+100 5000 |         INPUT             
+101 220B |         STORE a           
+102 5000 |         INPUT             
+103 220C |         STORE b           
+104 5000 |         INPUT             
+105 220D |         STORE c           
+106 5000 |         INPUT             
+107 220E |         STORE d           
+         |                          
+108 5000 |         INPUT             
+109 220F |         STORE e           
+10A 5000 |         INPUT             
+10B 2210 |         STORE f           
+10C 5000 |         INPUT             
+10D 2211 |         STORE g           
+10E 5000 |         INPUT             
+10F 2212 |         STORE h           
+         |                          
+110 5000 |         INPUT             
+111 2213 |         STORE i           
+112 5000 |         INPUT             
+113 2214 |         STORE j           
+114 5000 |         INPUT             
+115 2215 |         STORE k           
+116 5000 |         INPUT             
+117 2216 |         STORE l           
+         |                          
+118 120B |         LOAD a            
+119 2217 |         STORE A1          
+11A 120C |         LOAD b            
+11B 2218 |         STORE B1          
+11C 120D |         LOAD c            
+11D 2219 |         STORE C1          
+11E 120F |         LOAD e            
+11F 221A |         STORE E1          
+120 1210 |         LOAD f            
+121 221B |         STORE F1          
+122 1211 |         LOAD g            
+123 221C |         STORE G1          
+124 1213 |         LOAD i            
+125 221D |         STORE I1          
+126 1214 |         LOAD j            
+127 221E |         STORE J1          
+128 1215 |         LOAD k            
+129 221F |         STORE K1          
+         |                          
+12A 0189 |         JNS DET           
+12B 122D |         LOAD DETVAL       
+12C 222E |         STORE MDET        
+         |                          
+12D 122E |         LOAD MDET         
+12E 8400 |         SKIPCOND 400      
+12F 9133 |         JUMP GO           
+         |                          
+130 1236 |         LOAD NEGONE       
+131 6000 |         OUTPUT            
+132 7000 |         HALT              
+         |                          
+133 ?000 |  GO                       
+   **** Missing instruction.
+         |                          
+134 120E |         LOAD d            
+135 2217 |         STORE A1          
+136 120C |         LOAD b            
+137 2218 |         STORE B1          
+138 120D |         LOAD c            
+139 2219 |         STORE C1          
+13A 1212 |         LOAD h            
+13B 221A |         STORE E1          
+13C 1210 |         LOAD f            
+13D 221B |         STORE F1          
+13E 1211 |         LOAD g            
+13F 221C |         STORE G1          
+140 1216 |         LOAD l            
+141 221D |         STORE I1          
+142 1214 |         LOAD j            
+143 221E |         STORE J1          
+144 1215 |         LOAD k            
+145 221F |         STORE K1          
+146 0189 |         JNS DET           
+147 122D |         LOAD DETVAL       
+148 222F |         STORE DETX        
+         |                          
+149 120B |         LOAD a            
+14A 2217 |         STORE A1          
+14B 120E |         LOAD d            
+14C 2218 |         STORE B1          
+14D 120D |         LOAD c            
+14E 2219 |         STORE C1          
+14F 120F |         LOAD e            
+150 221A |         STORE E1          
+151 1212 |         LOAD h            
+152 221B |         STORE F1          
+153 1211 |         LOAD g            
+154 221C |         STORE G1          
+155 1213 |         LOAD i            
+156 221D |         STORE I1          
+157 1216 |         LOAD l            
+158 221E |         STORE J1          
+159 1215 |         LOAD k            
+15A 221F |         STORE K1          
+15B 0189 |         JNS DET           
+15C 122D |         LOAD DETVAL       
+15D 2230 |         STORE DETY        
+         |                          
+15E 120B |         LOAD a            
+15F 2217 |         STORE A1          
+160 120C |         LOAD b            
+161 2218 |         STORE B1          
+162 120E |         LOAD d            
+163 2219 |         STORE C1          
+164 120F |         LOAD e            
+165 221A |         STORE E1          
+166 1210 |         LOAD f            
+167 221B |         STORE F1          
+168 1212 |         LOAD h            
+169 221C |         STORE G1          
+16A 1213 |         LOAD i            
+16B 221D |         STORE I1          
+16C 1214 |         LOAD j            
+16D 221E |         STORE J1          
+16E 1216 |         LOAD l            
+16F 221F |         STORE K1          
+170 0189 |         JNS DET           
+171 122D |         LOAD DETVAL       
+172 2231 |         STORE DETZ        
+         |                          
+173 122F |         LOAD DETX         
+174 2232 |         STORE NUM         
+175 122E |         LOAD MDET         
+176 2233 |         STORE DEN         
+177 01FC |         JNS DIVIDE        
+178 1234 |         LOAD QUOT         
+179 6000 |         OUTPUT            
+         |                          
+17A 1230 |         LOAD DETY         
+17B 2232 |         STORE NUM         
+17C 122E |         LOAD MDET         
+17D 2233 |         STORE DEN         
+17E 01FC |         JNS DIVIDE        
+17F 1234 |         LOAD QUOT         
+180 6000 |         OUTPUT            
+         |                          
+181 1231 |         LOAD DETZ         
+182 2232 |         STORE NUM         
+183 122E |         LOAD MDET         
+184 2233 |         STORE DEN         
+185 01FC |         JNS DIVIDE        
+186 1234 |         LOAD QUOT         
+187 6000 |         OUTPUT            
+         |                          
+188 7000 |         HALT              
+         |                          
+189 0000 |  DET    HEX 0             
+18A 1217 |         LOAD A1           
+18B 2220 |         STORE X           
+18C 121B |         LOAD F1           
+18D 2221 |         STORE Y           
+18E 01EA |         JNS MULT          
+18F 1223 |         LOAD PROD         
+190 2224 |         STORE T1          
+191 1224 |         LOAD T1           
+192 2220 |         STORE X           
+193 121F |         LOAD K1           
+194 2221 |         STORE Y           
+195 01EA |         JNS MULT          
+196 1223 |         LOAD PROD         
+197 2225 |         STORE P1          
+         |                          
+198 1218 |         LOAD B1           
+199 2220 |         STORE X           
+19A 121C |         LOAD G1           
+19B 2221 |         STORE Y           
+19C 01EA |         JNS MULT          
+19D 1223 |         LOAD PROD         
+19E 2224 |         STORE T1          
+19F 1224 |         LOAD T1           
+1A0 2220 |         STORE X           
+1A1 121D |         LOAD I1           
+1A2 2221 |         STORE Y           
+1A3 01EA |         JNS MULT          
+1A4 1223 |         LOAD PROD         
+1A5 2226 |         STORE P2          
+         |                          
+1A6 1219 |         LOAD C1           
+1A7 2220 |         STORE X           
+1A8 121A |         LOAD E1           
+1A9 2221 |         STORE Y           
+1AA 01EA |         JNS MULT          
+1AB 1223 |         LOAD PROD         
+1AC 2224 |         STORE T1          
+1AD 1224 |         LOAD T1           
+1AE 2220 |         STORE X           
+1AF 121E |         LOAD J1           
+1B0 2221 |         STORE Y           
+1B1 01EA |         JNS MULT          
+1B2 1223 |         LOAD PROD         
+1B3 2227 |         STORE P3          
+         |                          
+1B4 1219 |         LOAD C1           
+1B5 2220 |         STORE X           
+1B6 121B |         LOAD F1           
+1B7 2221 |         STORE Y           
+1B8 01EA |         JNS MULT          
+1B9 1223 |         LOAD PROD         
+1BA 2224 |         STORE T1          
+1BB 1224 |         LOAD T1           
+1BC 2220 |         STORE X           
+1BD 121D |         LOAD I1           
+1BE 2221 |         STORE Y           
+1BF 01EA |         JNS MULT          
+1C0 1223 |         LOAD PROD         
+1C1 2228 |         STORE P4          
+         |                          
+1C2 1217 |         LOAD A1           
+1C3 2220 |         STORE X           
+1C4 121C |         LOAD G1           
+1C5 2221 |         STORE Y           
+1C6 01EA |         JNS MULT          
+1C7 1223 |         LOAD PROD         
+1C8 2224 |         STORE T1          
+1C9 1224 |         LOAD T1           
+1CA 2220 |         STORE X           
+1CB 121E |         LOAD J1           
+1CC 2221 |         STORE Y           
+1CD 01EA |         JNS MULT          
+1CE 1223 |         LOAD PROD         
+1CF 2229 |         STORE P5          
+         |                          
+1D0 1218 |         LOAD B1           
+1D1 2220 |         STORE X           
+1D2 121A |         LOAD E1           
+1D3 2221 |         STORE Y           
+1D4 01EA |         JNS MULT          
+1D5 1223 |         LOAD PROD         
+1D6 2224 |         STORE T1          
+1D7 1224 |         LOAD T1           
+1D8 2220 |         STORE X           
+1D9 121F |         LOAD K1           
+1DA 2221 |         STORE Y           
+1DB 01EA |         JNS MULT          
+1DC 1223 |         LOAD PROD         
+1DD 222A |         STORE P6          
+         |                          
+1DE 1225 |         LOAD P1           
+1DF 3226 |         ADD P2            
+1E0 3227 |         ADD P3            
+1E1 222B |         STORE S1          
+1E2 1228 |         LOAD P4           
+1E3 3229 |         ADD P5            
+1E4 322A |         ADD P6            
+1E5 222C |         STORE S2          
+1E6 122B |         LOAD S1           
+1E7 422C |         SUBT S2           
+1E8 222D |         STORE DETVAL      
+1E9 C189 |         JUMPI DET         
+         |                          
+1EA 0000 |  MULT   HEX 0             
+1EB A000 |         CLEAR             
+1EC 2223 |         STORE PROD        
+1ED 1221 |         LOAD Y            
+1EE 2222 |         STORE COUNT       
+1EF ?000 |  ML                       
+   **** Missing instruction.
+1F0 1222 |         LOAD COUNT        
+1F1 8400 |         SKIPCOND 400      
+1F2 91FA |         JUMP ME           
+1F3 1223 |         LOAD PROD         
+1F4 3220 |         ADD X             
+1F5 2223 |         STORE PROD        
+1F6 1222 |         LOAD COUNT        
+1F7 4235 |         SUBT ONE          
+1F8 2222 |         STORE COUNT       
+1F9 91EF |         JUMP ML           
+1FA ?000 |  ME                       
+   **** Missing instruction.
+1FB C1EA |         JUMPI MULT        
+         |                          
+1FC 0000 |  DIVIDE HEX 0             
+1FD A000 |         CLEAR             
+1FE 2234 |         STORE QUOT        
+1FF ?000 |  DL                       
+   **** Missing instruction.
+200 1232 |         LOAD NUM          
+201 4233 |         SUBT DEN          
+202 8000 |         SKIPCOND 000      
+203 9209 |         JUMP DE           
+204 2232 |         STORE NUM         
+205 1234 |         LOAD QUOT         
+206 3235 |         ADD ONE           
+207 2234 |         STORE QUOT        
+208 91FF |         JUMP DL           
+209 ?000 |  DE                       
+   **** Missing instruction.
+20A C1FC |         JUMPI DIVIDE      
+         |                          
+20B 0000 |  a      DEC 0             
+20C 0000 |  b      DEC 0             
+20D 0000 |  c      DEC 0             
+20E 0000 |  d      DEC 0             
+20F 0000 |  e      DEC 0             
+210 0000 |  f      DEC 0             
+211 0000 |  g      DEC 0             
+212 0000 |  h      DEC 0             
+213 0000 |  i      DEC 0             
+214 0000 |  j      DEC 0             
+215 0000 |  k      DEC 0             
+216 0000 |  l      DEC 0             
+217 0000 |  A1     DEC 0             
+218 0000 |  B1     DEC 0             
+219 0000 |  C1     DEC 0             
+21A 0000 |  E1     DEC 0             
+21B 0000 |  F1     DEC 0             
+21C 0000 |  G1     DEC 0             
+21D 0000 |  I1     DEC 0             
+21E 0000 |  J1     DEC 0             
+21F 0000 |  K1     DEC 0             
+220 0000 |  X      DEC 0             
+221 0000 |  Y      DEC 0             
+222 0000 |  COUNT  DEC 0             
+223 0000 |  PROD   DEC 0             
+224 0000 |  T1     DEC 0             
+225 0000 |  P1     DEC 0             
+226 0000 |  P2     DEC 0             
+227 0000 |  P3     DEC 0             
+228 0000 |  P4     DEC 0             
+229 0000 |  P5     DEC 0             
+22A 0000 |  P6     DEC 0             
+22B 0000 |  S1     DEC 0             
+22C 0000 |  S2     DEC 0             
+22D 0000 |  DETVAL DEC 0             
+22E 0000 |  MDET   DEC 0             
+22F 0000 |  DETX   DEC 0             
+230 0000 |  DETY   DEC 0             
+231 0000 |  DETZ   DEC 0             
+232 0000 |  NUM    DEC 0             
+233 0000 |  DEN    DEC 0             
+234 0000 |  QUOT   DEC 0             
+235 0001 |  ONE    DEC 1             
+236 FFFF |  NEGONE DEC -1            
+
+5 errors found.  Assembly unsuccessful.
+
+         SYMBOL TABLE
+         --------------------------------------------------
+          Symbol | Defined | References 
+         --------+---------+-------------------------------
+          A1     |   217   | 119, 135, 14A, 15F, 18A, 1C2
+          B1     |   218   | 11B, 137, 14C, 161, 198, 1D0
+          C1     |   219   | 11D, 139, 14E, 163, 1A6, 1B4
+          COUNT  |   222   | 1EE, 1F0, 1F6, 1F8
+          DE     |   209   | 203
+          DEN    |   233   | 176, 17D, 184, 201
+          DET    |   189   | 12A, 146, 15B, 170, 1E9
+          DETVAL |   22D   | 12B, 147, 15C, 171, 1E8
+          DETX   |   22F   | 148, 173
+          DETY   |   230   | 15D, 17A
+          DETZ   |   231   | 172, 181
+          DIVIDE |   1FC   | 177, 17E, 185, 20A
+          DL     |   1FF   | 208
+          E1     |   21A   | 11F, 13B, 150, 165, 1A8, 1D2
+          F1     |   21B   | 121, 13D, 152, 167, 18C, 1B6
+          G1     |   21C   | 123, 13F, 154, 169, 19A, 1C4
+          GO     |   133   | 12F
+          I1     |   21D   | 125, 141, 156, 16B, 1A1, 1BD
+          J1     |   21E   | 127, 143, 158, 16D, 1AF, 1CB
+          K1     |   21F   | 129, 145, 15A, 16F, 193, 1D9
+          MDET   |   22E   | 12C, 12D, 175, 17C, 183
+          ME     |   1FA   | 1F2
+          ML     |   1EF   | 1F9
+          MULT   |   1EA   | 18E, 195, 19C, 1A3, 1AA, 1B1, 
+                 |         | 1B8, 1BF, 1C6, 1CD, 1D4, 1DB, 
+                 |         | 1FB
+          NEGONE |   236   | 130
+          NUM    |   232   | 174, 17B, 182, 200, 204
+          ONE    |   235   | 1F7, 206
+          P1     |   225   | 197, 1DE
+          P2     |   226   | 1A5, 1DF
+          P3     |   227   | 1B3, 1E0
+          P4     |   228   | 1C1, 1E2
+          P5     |   229   | 1CF, 1E3
+          P6     |   22A   | 1DD, 1E4
+          PROD   |   223   | 18F, 196, 19D, 1A4, 1AB, 1B2, 
+                 |         | 1B9, 1C0, 1C7, 1CE, 1D5, 1DC, 
+                 |         | 1EC, 1F3, 1F5
+          QUOT   |   234   | 178, 17F, 186, 1FE, 205, 207
+          S1     |   22B   | 1E1, 1E6
+          S2     |   22C   | 1E5, 1E7
+          T1     |   224   | 190, 191, 19E, 19F, 1AC, 1AD, 
+                 |         | 1BA, 1BB, 1C8, 1C9, 1D6, 1D7
+          X      |   220   | 18B, 192, 199, 1A0, 1A7, 1AE, 
+                 |         | 1B5, 1BC, 1C3, 1CA, 1D1, 1D8, 
+                 |         | 1F4
+          Y      |   221   | 18D, 194, 19B, 1A2, 1A9, 1B0, 
+                 |         | 1B7, 1BE, 1C5, 1CC, 1D3, 1DA, 
+                 |         | 1ED
+          a      |   20B   | 101, 118, 149, 15E
+          b      |   20C   | 103, 11A, 136, 160
+          c      |   20D   | 105, 11C, 138, 14D
+          d      |   20E   | 107, 134, 14B, 162
+          e      |   20F   | 109, 11E, 14F, 164
+          f      |   210   | 10B, 120, 13C, 166
+          g      |   211   | 10D, 122, 13E, 153
+          h      |   212   | 10F, 13A, 151, 168
+          i      |   213   | 111, 124, 155, 16A
+          j      |   214   | 113, 126, 142, 16C
+          k      |   215   | 115, 128, 144, 159
+          l      |   216   | 117, 140, 157, 16E
+         --------------------------------------------------
+
+
