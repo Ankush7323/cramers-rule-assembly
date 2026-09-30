@@ -55,7 +55,7 @@ D ≠ 0
 
 Below is the program running in the MARIE Simulator:
 
-![Cramer's Rule running in MARIE Simulator](marie-cramers-rule.png)
+![Cramer's Rule running in MARIE Simulator][(marie-cramers-rule.png](https://github.com/Ankush7323/cramers-rule-assembly/blob/main/Running%20Marie%20Sim.jpeg?raw=true))
 
 ## How to Run
 
