@@ -1,8 +1,8 @@
-# Cramer's Rule in MIPS Assembly
+# Cramer's Rule in MARIE Assembly
 
 ## About the Project
 
-This project implements **Cramer's Rule** using **MIPS Assembly Language**. It was developed and tested using the **MARS (MIPS Assembler and Runtime Simulator)**.
+This project implements **Cramer's Rule** using **MARIE Assembly Language** and was developed and tested using the **MARIE Simulator**.
 
 The program demonstrates how a mathematical algorithm can be implemented using low-level assembly instructions.
 
@@ -17,7 +17,7 @@ ax + by = e
 cx + dy = f
 ```
 
-The solution can be calculated using:
+The determinants are calculated as:
 
 ```text
 D  = ad - bc
@@ -28,35 +28,33 @@ x = Dx / D
 y = Dy / D
 ```
 
-The system has a unique solution when `D ≠ 0`.
+A unique solution exists when `D ≠ 0`.
 
 ## Features
 
-- Written in MIPS Assembly Language
-- Runs using the MARS simulator
-- Accepts values for a system of linear equations
-- Calculates the required determinants
-- Uses Cramer's Rule to calculate the values of `x` and `y`
-- Demonstrates arithmetic operations and user input/output in MIPS Assembly
+- Written in MARIE Assembly Language
+- Runs using the MARIE Simulator
+- Implements Cramer's Rule
+- Performs determinant calculations
+- Uses basic assembly instructions for arithmetic and data manipulation
+- Demonstrates low-level implementation of a mathematical algorithm
 
 ## Technologies Used
 
-- MIPS Assembly Language
-- MARS (MIPS Assembler and Runtime Simulator)
+- MARIE Assembly Language
+- MARIE Simulator
 
 ## How to Run
 
-1. Download and open the MARS simulator.
-2. Open the `.asm` file from this repository.
-3. Click **Assemble**.
-4. Click **Run**.
-5. Enter the requested values in the console.
-6. The program will calculate and display the result.
+1. Open the **MARIE Simulator**.
+2. Load the program file.
+3. Assemble the program.
+4. Run the program.
+5. Enter the required values when prompted.
+6. View the calculated results in the simulator.
 
 ## Purpose
 
-This project was created as part of my Computer Science studies to practise Assembly Language programming and understand how mathematical algorithms can be implemented at a lower level.
+This project was developed as part of my Computer Science studies to practise Assembly Language programming and gain a better understanding of how mathematical algorithms can be implemented at a low level.
 
 ## Author
-
-Suryanshu Bisram
